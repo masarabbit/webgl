@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>webgl</title>
+
+  <style type="text/css">
+    canvas {
+      border: 5px dotted tomato;
+    }
+  </style>
+  <script type="text/javascript">
+    'use strict'
+    function init() {
+      const canvas = document.querySelector('canvas')
+
+      if (!canvas) console.log('error')
+
+      const gl = canvas.getContext('webgl2')
+
+      const message = gl 
+        ? 'yes'
+        : 'no'
+
+      alert(message)  
+    }
+
+    window.onload = init
+  </script>
+</head>
+<body>
+
+  <canvas id="webgl-canvas"  width="800" height="600">
+  </canvas>
+  
+</body>
+</html>
